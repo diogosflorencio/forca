@@ -14,8 +14,8 @@ body {
 }
 .forca {
     display: flex;
-    height: 70%;
-    width: 100vw;
+    height: 60%;
+
 }
 .imagens-forca {
     width: 250px;
@@ -25,13 +25,14 @@ body {
     display: flex;
     align-items: end;
     justify-content: center;
+    width: 350px;
 }
 .palavra {
     font-size: 22px;
 }
 .teclado {
     text-align: center;
-    top: 10px;
+    top: 25px;
     position: relative;
 }
 button {
