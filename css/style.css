@@ -29,6 +29,11 @@ body {
 }
 .palavra {
     font-size: 22px;
+
+}
+.conteiner-palavra p {
+    display: inline-block;
+    margin-right: 10px;
 }
 .teclado {
     text-align: center;
