@@ -1,4 +1,4 @@
-let palavras = ["DAWDAWDWRdwdwdEQ"]
+let palavras = ["DAWDAWDWRdwdwdEQ", "ZZZZZ"]
 
 const temLetra = (letra) => {
     for (let i = 0; i < palavras[palavraDaVez()].length; i++) {
@@ -10,5 +10,7 @@ const temLetra = (letra) => {
 }
 
 function palavraDaVez(){
-    return 0;
+    const posicao = Math.round(Math.random()*10);
+    console.log("pos" + posicao)
+    return posicao;
 }
