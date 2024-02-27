@@ -15,7 +15,6 @@ body {
 .forca {
     display: flex;
     height: 60%;
-
 }
 .imagens-forca {
     width: 250px;
@@ -51,4 +50,13 @@ button {
 }
 .segunda-linha {
     margin: 10px;
+}
+.conteiner-dica {
+    position: relative;
+}
+.dica {
+    position: absolute;
+    top: 100px;
+    left: 180px;
+    width: 162px;
 }
