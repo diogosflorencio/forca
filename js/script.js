@@ -1,3 +1,5 @@
+// definição das palavras e dicas
+
 let palavras = [
     "ENIGMA",
     "AVENTURA",
@@ -24,8 +26,13 @@ var dicas = [
     "Pista: A magia está no ar!"
 ];
 
+
+
 let palavraDaVez = Math.round(Math.random()*10)
 let palavra = document.querySelector(".palavra");
+
+let dica = document.querySelector(".dica");
+dica.innerHTML = dicas[palavraDaVez]
 
 for(let i = 0; i < palavras[palavraDaVez].length; i++){
     let traco = document.createElement("p");
