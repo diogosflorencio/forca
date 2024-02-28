@@ -47,18 +47,19 @@ const temLetra = (letra) => {
 
         if(letra == palavras[palavraDaVez][i]){
             escrevePalavra(letra)
-            return letra
-
         }else {
             contadorLetras++;
-        }
-        
+            log("1")
+            if (contadorLetras == palavras[palavraDaVez].length){
+                document.getElementsByClassName("boneco")[contadorBoneco].style="Display: block;"
+                contadorBoneco++;
+                log(palavras[palavraDaVez].length)
+                contadorLetras = 0;
+            }
+        }   
+
     }
-    if (contadorLetras == palavras[palavraDaVez].length){
-        document.getElementsByClassName("boneco")[contadorBoneco].style="Display: block;"
-        contadorBoneco++;
-        contadorLetras = 0;
-    }
+   
 
 }
 
