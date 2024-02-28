@@ -71,7 +71,6 @@ button {
     height: 402px;
     width: 352px;
     position: absolute;
-    z-index: 100;
     flex-direction: column;
 }
 .imagem-reload {
