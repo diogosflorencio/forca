@@ -51,6 +51,10 @@ button {
 .segunda-linha {
     margin: 10px;
 }
+.botao-quarta-linha {
+    border-radius: 50px;
+    width: 160px;
+}
 .conteiner-dica {
     position: relative;
 }
@@ -60,3 +64,4 @@ button {
     left: 180px;
     width: 162px;
 }
+
