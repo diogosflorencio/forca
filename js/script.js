@@ -70,6 +70,9 @@ function escrevePalavra(param) {
     }
 }
 
+function reset(){
+    location.reload();
+}
 
 
 // debug
