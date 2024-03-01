@@ -44,27 +44,30 @@ for (let i = 0; i < tamanhoPalavraDaVez; i++) {
 let contadorLetras = 0;
 let contadorBoneco = 0;
 const temLetra = (letra) => {
-    for (let i = 0; i < tamanhoPalavraDaVez; i++) {
+    let encontrouLetra = false;
 
+    for (let i = 0; i < tamanhoPalavraDaVez; i++) {
         if (letra == palavras[palavraDaVez][i]) {
-            escrevePalavra(letra)
-            log(palavras[palavraDaVez][i])
-        } else {
+            escrevePalavra(letra);
+            log(palavras[palavraDaVez][i]);
+            encontrouLetra = true;
+        }
+        if (!encontrouLetra) {
             contadorLetras++;
-            log("else, de letra diferete do escolhido, ativo")
+            log("else, de letra diferete do escolhido, ativo");
             if (contadorLetras == tamanhoPalavraDaVez) {
-                document.getElementsByClassName("boneco")[contadorBoneco].style = "Display: block;"
+                log("contador + tamanho p" + contadorLetras + "----" + tamanhoPalavraDaVez + "lll");
+                document.getElementsByClassName("boneco")[contadorBoneco].style = "Display: block;";
                 contadorBoneco++;
-                log(palavras[palavraDaVez].length)
+                log(palavras[palavraDaVez].length);
                 contadorLetras = 0;
-                
             }
         }
-
     }
 
 
-}
+};
+
 
 function escrevePalavra(param) {
     for (let i = 0; i < tamanhoPalavraDaVez; i++) {
