@@ -28,12 +28,13 @@ var dicas = [
 
 
 
-let palavraDaVez = Math.round(Math.random()*10)
+let palavraDaVez = Math.round(Math.random() * 10)
+let tamanhoPalavraDaVez = palavras[palavraDaVez].length;
 let palavra = document.querySelector(".palavra");
 let dica = document.querySelector(".dica");
 dica.innerHTML = dicas[palavraDaVez]
 
-for(let i = 0; i < palavras[palavraDaVez].length; i++){
+for (let i = 0; i < tamanhoPalavraDaVez; i++) {
     let traco = document.createElement("p");
     traco.innerHTML = "_"
     palavra.appendChild(traco);
@@ -43,40 +44,42 @@ for(let i = 0; i < palavras[palavraDaVez].length; i++){
 let contadorLetras = 0;
 let contadorBoneco = 0;
 const temLetra = (letra) => {
-    for (let i = 0; i < palavras[palavraDaVez].length; i++) {
+    for (let i = 0; i < tamanhoPalavraDaVez; i++) {
 
-        if(letra == palavras[palavraDaVez][i]){
+        if (letra == palavras[palavraDaVez][i]) {
             escrevePalavra(letra)
-        }else {
+            log(palavras[palavraDaVez][i])
+        } else {
             contadorLetras++;
-            log("1")
-            if (contadorLetras == palavras[palavraDaVez].length){
-                document.getElementsByClassName("boneco")[contadorBoneco].style="Display: block;"
+            log("else, de letra diferete do escolhido, ativo")
+            if (contadorLetras == tamanhoPalavraDaVez) {
+                document.getElementsByClassName("boneco")[contadorBoneco].style = "Display: block;"
                 contadorBoneco++;
                 log(palavras[palavraDaVez].length)
                 contadorLetras = 0;
+                
             }
-        }   
+        }
 
     }
-   
+
 
 }
 
 function escrevePalavra(param) {
-    for(let i = 0; i < palavras[palavraDaVez].length; i++){
-        if (palavras[palavraDaVez][i] == param){ 
+    for (let i = 0; i < tamanhoPalavraDaVez; i++) {
+        if (palavras[palavraDaVez][i] == param) {
             palavra.children[i].innerHTML = param;
         }
     }
 }
 
-function reset(){
+function reset() {
     location.reload();
 }
 
 
 // debug
-function log(param){
+function log(param) {
     console.log(param)
 }
