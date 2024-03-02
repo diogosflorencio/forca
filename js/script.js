@@ -43,9 +43,9 @@ for (let i = 0; i < tamanhoPalavraDaVez; i++) {
 
 let contadorLetras = 0;
 let contadorBoneco = 0;
+let contadorB = 0;
 const temLetra = (letra) => {
     let encontrouLetra = false;
-
     for (let i = 0; i < tamanhoPalavraDaVez; i++) {
         if (letra == palavras[palavraDaVez][i]) {
             escrevePalavra(letra);
@@ -54,27 +54,36 @@ const temLetra = (letra) => {
         }
         if (!encontrouLetra) {
             contadorLetras++;
-            log("else, de letra diferete do escolhido, ativo");
             if (contadorLetras == tamanhoPalavraDaVez) {
-                log("contador + tamanho p" + contadorLetras + "----" + tamanhoPalavraDaVez + "lll");
                 document.getElementsByClassName("boneco")[contadorBoneco].style = "Display: block;";
                 contadorBoneco++;
-                log(palavras[palavraDaVez].length);
                 contadorLetras = 0;
+                contadorB++
+                log(contadorB)
+                if (contadorB == 9) {
+                    gameover("derrota");
+                }
             }
         }
     }
-
-
 };
 
-
+let contadorPalavra = 0
 function escrevePalavra(param) {
     for (let i = 0; i < tamanhoPalavraDaVez; i++) {
         if (palavras[palavraDaVez][i] == param) {
             palavra.children[i].innerHTML = param;
+            contadorPalavra++;
+            if (contadorPalavra == tamanhoPalavraDaVez) {
+                log(contadorPalavra +"=" + tamanhoPalavraDaVez)
+                gameover("vitoria");
+            }
         }
     }
+}
+
+function gameover(situacao, quantidade){
+    alert(situacao)
 }
 
 function reset() {
