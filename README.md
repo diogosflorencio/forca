@@ -21,7 +21,7 @@ O projeto ainda está em desenvolvimento, e as próximas atualizações serão f
 - [x] Posicionando elemento com display flex
 - [x] Pondo grid no teclado
 - [x] Adicionando funcionalidades com JavaScript
-- [ ] Realizar testes e correções
+- [x] Realizar testes e correções
 - [ ] Finalização
 
 ## 💻 Pré-requisitos
