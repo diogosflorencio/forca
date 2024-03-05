@@ -43,26 +43,23 @@ for (let i = 0; i < tamanhoPalavraDaVez; i++) {
 
 let contadorLetras = 0;
 let contadorBoneco = 0;
-let contadorB = 0;
+
 const temLetra = (letra) => {
     let encontrouLetra = false;
+
     for (let i = 0; i < tamanhoPalavraDaVez; i++) {
         if (letra == palavras[palavraDaVez][i]) {
             escrevePalavra(letra);
-            log(palavras[palavraDaVez][i]);
             encontrouLetra = true;
         }
-        if (!encontrouLetra) {
+        if (encontrouLetra == false) {
             contadorLetras++;
             if (contadorLetras == tamanhoPalavraDaVez) {
                 document.getElementsByClassName("boneco")[contadorBoneco].style = "Display: block;";
                 contadorBoneco++;
                 contadorLetras = 0;
-                contadorB++
-                log(contadorB)
-                if (contadorB == 9) {
-                    gameover("derrota");
-                }
+                gameover(contadorBoneco, "derrota");
+
             }
         }
     }
@@ -74,16 +71,17 @@ function escrevePalavra(param) {
         if (palavras[palavraDaVez][i] == param) {
             palavra.children[i].innerHTML = param;
             contadorPalavra++;
-            if (contadorPalavra == tamanhoPalavraDaVez) {
-                log(contadorPalavra +"=" + tamanhoPalavraDaVez)
-                gameover("vitoria");
-            }
+            gameover(contadorBoneco, "derrota");
         }
     }
 }
 
-function gameover(situacao, quantidade){
-    alert(situacao)
+function gameover(quantidade, situacao ){
+    if (quantidade == 9) {
+        alert(situacao)
+    } else if (quantidade == tamanhoPalavraDaVez){
+        alert(situacao)
+    }
 }
 
 function reset() {
