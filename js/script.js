@@ -47,12 +47,12 @@ let contadorBoneco = 0;
 const temLetra = (letra) => {
     let encontrouLetra = false;
 
-    for (let i = 0; i < tamanhoPalavraDaVez; i++) {
+    for (let i = 0; i <= tamanhoPalavraDaVez; i++) {
         if (letra == palavras[palavraDaVez][i]) {
             escrevePalavra(letra);
             encontrouLetra = true;
         }
-        if (encontrouLetra == false) {
+        if (!encontrouLetra) { // as vezes, mesmo o "entrouLetra" a cima sendo "true", esse if é executado
             contadorLetras++;
             if (contadorLetras == tamanhoPalavraDaVez) {
                 document.getElementsByClassName("boneco")[contadorBoneco].style = "Display: block;";
