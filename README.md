@@ -6,9 +6,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/diogosflorencio/forca?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/diogosflorencio/forca?style=for-the-badge)
 
-<img src="" style="width:33%" alt="Imagem de exemplo">
-
-
+<img src="https://github.com/diogosflorencio/forca/assets/33941005/ee2cc304-8d38-404f-a124-53168d455107" style="width:33%" alt="Imagem de exemplo">
 
 > Projeto criado utilizando JavaScript, HTML e CSS. O objetivo do projeto é criar um jogo de forca para praticar o JavaScript.
 
